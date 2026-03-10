@@ -58,6 +58,16 @@ on:
         required: false
         type: string
         default: 'true'
+      enabledTools:
+        description: 'JSON array of explicitly enabled tools (e.g., ["semgrep","trivy"])'
+        required: false
+        type: string
+        default: '[]'
+      disabledTools:
+        description: 'JSON array of disabled tools (e.g., ["cpd","markdownlint"])'
+        required: false
+        type: string
+        default: '[]'
 
 # Cancel in-progress runs for the same callback (safety net)
 concurrency:
